@@ -28,6 +28,15 @@ services:
     environment:
       KEY: "255d861b-5ea1-5996-9aa3-922530ec40b1"
       SECRET: "6116487b-cda1-52c2-b5b5-c8022c45e263"
+      CORS_ENABLED: "true"
+      CORS_ORIGIN: "*"
+      CORS_ALLOWED_HEADERS: "*"
+      ACCESS_TOKEN_TTL: "15m"
+      REFRESH_TOKEN_TTL: "5d"
+      REFRESH_TOKEN_COOKIE_SECURE: false
+      REFRESH_TOKEN_COOKIE_SAME_SITE: "lax"
+      REFRESH_TOKEN_COOKIE_NAME: "direct_refresh_token"
+      REFRESH_TOKEN_COOKIE_DOMAIN: "http://localhost:8055"
 
       DB_CLIENT: "pg"
       DB_HOST: "database"
